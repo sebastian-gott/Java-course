@@ -26,8 +26,30 @@ public class Main {
         }
 
         int secondTopScore = 60;
-        if (topScore > secondTopScore && topScore < 100) {
+        if ((topScore > secondTopScore) && (topScore < 100)) {
             System.out.println("Greater than top score and less than 100");
+        }
+        if ((topScore > 90) || (secondTopScore <= 90)) {
+            System.out.println("Either or both of the conditions are true");
+        }
+        boolean isCar = false;
+        if (isCar) {
+            System.out.println("This is not supposed to happen");
+        }
+        boolean wasCar = isCar ? true : false;
+
+        double challValue = 20;
+        double secondChallValue = 80;
+
+        double addedValue = challValue + secondChallValue * 100;
+        System.out.println(addedValue);
+        System.out.println(addedValue % 40);
+        double remainderValue = addedValue % 40;
+
+        if (remainderValue == 0) {
+            System.out.println("Value is true");
+        } else {
+            System.out.println("Value is false");
         }
     }
 }
