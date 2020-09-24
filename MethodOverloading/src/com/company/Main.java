@@ -38,6 +38,6 @@ public class Main {
         double feet = (int) inches / 12;
         double remainingInches = (int) inches % 12;
         System.out.println(inches + " inches = " + feet + " feet and " + remainingInches + " inches");
-        return calcFeetAndInchesToCentimeters(feet, inches);
+        return calcFeetAndInchesToCentimeters(feet, remainingInches);
     }
 }
