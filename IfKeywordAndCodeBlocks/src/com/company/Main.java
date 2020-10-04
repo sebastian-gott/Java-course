@@ -17,6 +17,16 @@ public class Main {
 //            System.out.println("Got here");
 //        }
 
+        int a = 5;
+        int b = 6;
+        int sum = a + b;
+
+        if(sum < 20 && sum > 10 ) {
+            System.out.println("Sum is = " + 20);
+        } else {
+            System.out.println("Sum is = " + sum);
+        }
+
         if (gameOver == true){
             int finalScore = score + (levelCompleted * bonus);
             System.out.println("Your final score was " + finalScore);
