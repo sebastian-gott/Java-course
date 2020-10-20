@@ -22,6 +22,13 @@ public class Main {
             JOptionPane.showMessageDialog(null, "Wrong format");
         }
 
+        StringBuilder str
+                = new StringBuilder();
+
+        str.append("Seb");
+
+        System.out.println("String" + str.toString());
+
         String myString = "This is a string";
         System.out.println(myString);
         myString = myString + ", and this is more.";
