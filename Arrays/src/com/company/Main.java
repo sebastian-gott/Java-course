@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -34,5 +36,36 @@ public class Main {
             System.out.println("Sum = " + sum);
             System.out.println("Average = " + average);
 
+
+            int[] scores = new int[10];
+            int score = 0;
+            int count = 0;
+            int total = 0;
+            final int QUIT = 999;
+            final int MAX = 10;
+            Scanner input = new Scanner(System.in);
+        System.out.println("Enter the quiz score or "  + QUIT + " to quit >>");
+        score = input.nextInt();
+        while(score != QUIT) {
+            scores[count] = score;
+            total += scores[count];
+            ++count;
+            if(count == MAX)
+                score = QUIT;
+            else {
+                System.out.println("Enter next quiz value or " + QUIT + " to exit >>");
+            }
+        }
+
+        System.out.println("\n The scores entered were: ");
+        for(int x = 0; x < count; ++x) {
+            System.out.println(scores[x] + "  ");
+
+            if(count != 0) {
+                System.out.println("\n The average is ");
+                System.out.printf("%.2f", total + 1.0 / count);
+            } else
+                System.out.println("No scores were entered");
+        }
     }
 }
