@@ -1,5 +1,8 @@
 package com.company;
 
+import javax.swing.*;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -83,6 +86,30 @@ public class Main {
 //        } else {
 //            result = false;
 //        }
+
+        int numRight = 4;
+        int totalQuestions = 10;
+
+        double prosent;
+        prosent = (double) numRight / (double) totalQuestions * 100;
+        System.out.println(prosent);
+
+        int k;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter K >>");
+        k = input.nextInt();
+        int S = 0;
+        for (int i = 1; i <= k; i += 2){
+            S += i*i;
+            if(i==k-1){
+                S += k*k;
+            }
+        }
+        System.out.println(S);
+
+
+
+
 
 
     }
