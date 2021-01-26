@@ -5,7 +5,9 @@ public class Recordings {
     private String artist;
     private double time;
 
+
     public Recordings(String title, String artist, double time) {
+        super();
         this.title = title;
         this.artist = artist;
         this.time = time;
@@ -33,5 +35,11 @@ public class Recordings {
 
     public void setTime(double time) {
         this.time = time;
+    }
+
+    @Override
+
+    public String toString() {
+        return ("Tittel: " + this.getTitle() + ", Artist: " + this.getArtist() + ", Spilletid: " + this.getTime() + " sekunder\n");
     }
 }
