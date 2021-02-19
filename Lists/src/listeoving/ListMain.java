@@ -64,6 +64,7 @@ public class ListMain {
         Ansatte.add(new Ansatt("Sindre", "Utvikler", 25));
 
         Collections.sort(Ansatte);
+        //System.out.println(Ansatte.toString());
 
         for(Ansatt str: Ansatte) {
             System.out.println(str);
