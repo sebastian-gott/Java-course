@@ -14,7 +14,7 @@ public class MainFour {
         System.out.println("Path is " + filePath.toString());
 
         try{
-            filePath.getFileSystem().provider().checkAccess(filePath, AccessMode.READ, AccessMode.EXECUTE);
+            filePath.getFileSystem().provider().checkAccess(filePath, AccessMode.READ);
             System.out.println("File can be used");
         } catch (IOException e) {
             System.out.println("File cannot be used");
