@@ -15,7 +15,7 @@ public class Main {
 
         try {
             // Get a connection to database
-            myConn = DriverManager.getConnection("", "root", "root");
+            myConn = DriverManager.getConnection("jdbc:mysql://localhost:3306/databaseName", "root", "root");
 
             // Create a statement
 
