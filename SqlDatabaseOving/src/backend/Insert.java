@@ -2,6 +2,7 @@ package backend;
 
 import database.DatabaseConnection;
 
+import javax.xml.crypto.Data;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,8 +11,9 @@ import java.sql.SQLException;
 
 public class Insert extends DatabaseConnection {
 
-    public Connection connection;
     static ResultSet myRs = null;
+
+    DatabaseConnection myConn = new DatabaseConnection();
 
 
     public void insertEmployee(String lastName, String firstName, String email, String department, String salary) {
@@ -23,7 +25,7 @@ public class Insert extends DatabaseConnection {
                     "values" +
                     "(?, ?, ?, ?, ?)";
 
-            PreparedStatement myStmt = connection.prepareStatement(query);
+            PreparedStatement myStmt = myConn.connection().prepareStatement(query);
 
 
             myStmt.setString(1, lastName);

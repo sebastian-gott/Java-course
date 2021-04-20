@@ -68,6 +68,7 @@ public class InsertForm extends JFrame {
         centralPanel.add(salaryLabel);
         centralPanel.add(salaryInput);
 
+
         insertButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e)  {
                     insertEmployee.insertEmployee(lastNameInput.getText(), firstNameInput.getText(), emailInput.getText(), departmentInput.getText(), salaryInput.getText());

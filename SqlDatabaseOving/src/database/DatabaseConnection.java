@@ -16,7 +16,7 @@ public class DatabaseConnection {
 
 
 
-    public Connection getConnection() {
+    public Connection connection() {
         try {
             return DriverManager.getConnection(dbUrl, user, pass);
 
